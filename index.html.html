@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עו"ד מוטי גרוסמן - ייצוג משפטי מקצועי ואישי</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header-content .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+        
+        .experience-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .hero-section {
+            background: white;
+            padding: 4rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .hero-content h2 {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #5a6c7d;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6);
+        }
+        
+        .services-section {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .services-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .services-header h2 {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #1e3c72;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: #1e3c72;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: #5a6c7d;
+            line-height: 1.8;
+        }
+        
+        .values-section {
+            background: white;
+            padding: 4rem 0;
+        }
+        
+        .values-container {
+            text-align: center;
+        }
+        
+        .values-container h2 {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 3rem;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .value-item {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .value-item:hover {
+            border-color: #1e3c72;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .value-icon {
+            font-size: 3rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        .value-item h3 {
+            color: #1e3c72;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .contact-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .contact-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .contact-item p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .services-header h2, .values-container h2, .contact-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>עו"ד מוטי גרוסמן</h1>
+                <p class="subtitle">ייצוג משפטי מקצועי, אישי ומוביל לתוצאות</p>
+                <div class="experience-badge">למעלה מ-20 שנות ניסיון</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2>המומחיות והניסיון שאתם צריכים</h2>
+                <p>משרדנו מתמחה במתן ייצוג משפטי מקצועי ואישי עם טיפול צמוד לאורך כל התהליך. אנו מאמינים שכל לקוח זכאי לקבל את השירות המקצועי והאישי ביותר, עם זמינות גבוהה ופתרונות מהירים המותאמים לצרכים הייחודיים שלו.</p>
+                <a href="#contact" class="cta-button">צרו קשר לייעוץ</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <div class="services-header">
+                <h2>התחומים שלנו</h2>
+                <p style="font-size: 1.1rem; color: #5a6c7d;">ייצוג משפטי מקיף במגוון רחב של תחומי משפט</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>דיני משפחה</h3>
+                    <p>טיפול מקיף ומקצועי בתיקי גירושין, מזונות ומשמורת. ליווי אישי וצמוד בתקופה הרגישה הזו עם מתן פתרונות מותאמים לכל משפחה.</p>
+                </div>
+                <div class="service-card">
+                    <h3>ירושות וצוואות</h3>
+                    <p>עריכת צוואות מקצועית, הוצאת צווי ירושה, וייצוג במחלוקות בענייני צוואות וירושות.</p>
+                </div>
+                <div class="service-card">
+                    <h3>עריכת חוזים</h3>
+                    <p>ניסוח חוזים מקצועי ומדויק המותאמים לצרכים הייחודיים שאתם זקוקים להם. הגנה על האינטרסים שאתם מעוניינים להגן עליהם בכל עסקה או הסכם.</p>
+                </div>
+                <div class="service-card">
+                    <h3>תביעות כספיות וחוזיות</h3>
+                    <p>ייצוג בתביעות מורכבות להשגת התוצאות הטובות ביותר. ניסיון עשיר בניהול תביעות בבתי המשפט.</p>
+                </div>
+                <div class="service-card">
+                    <h3>בתים משותפים</h3>
+                    <p>פתרון סכסוכים וייצוג משפטי בענייני בתים משותפים. טיפול מקצועי בבעיות ועד בית, קבלנים ודמי ניהול.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <div class="values-container">
+                <h2>למה לבחור בנו?</h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">⚖️</div>
+                        <h3>מקצועיות מוכחת</h3>
+                        <p>למעלה מ-20 שנות ניסיון בייצוג משפטי עם מומחיות בתחומים מגוונים</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🤝</div>
+                        <h3>טיפול אישי</h3>
+                        <p>כל לקוח מקבל יחס אישי ומותאם לצרכיו הייחודיים</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">📞</div>
+                        <h3>זמינות גבוהה</h3>
+                        <p>נגישות מלאה ויכולת ליצור קשר במגוון דרכים בכל עת</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">⚡</div>
+                        <h3>פתרונות מהירים</h3>
+                        <p>עבודה יעילה ומהירה להשגת תוצאות בזמן הקצר ביותר</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>צרו קשר עוד היום</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">נשמח לסייע לכם ולספק את השירות המקצועי שאתם זקוקים לו</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>פרטי התקשרות</h3>
+                        <p><strong>טלפון נייד:</strong> <a href="tel:054-6800307">054-6800307</a></p>
+                        <p><strong>אימייל:</strong> <a href="mailto:m.grossman.lawoffice@gmail.com">m.grossman.lawoffice@gmail.com</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>כתובת המשרד</h3>
+                        <p>מגדלי K</p>
+                        <p>שדרות ירושלים</p>
+                        <p>אשדוד</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <a href="tel:054-6800307" class="cta-button">התקשרו עכשיו</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 עו"ד מוטי גרוסמן - כל הזכויות שמורות | ייצוג משפטי מקצועי ואישי</p>
+        </div>
+    </footer>
+</body>
+</html>
